@@ -16,6 +16,6 @@
     <string name="login_successful">登录成功</string>
 
     <!-- mock data-->
-    <string name="mock_login_successful">{success:1,error:"",token:"aaaaaaaaaaaaaaaaaaaaa"}</string>
-    <string name="mock_login_failure">{success:0,error:"验证码错误"}</string>
+    <string name="mock_login_successful">{"success":1,"error":"\" \"","token":"aaaaaaaaaaaaaaaaaaaaa"}</string>
+    <string name="mock_login_failure">{"success":0,"error":"验证码错误"}</string>
 </resources>

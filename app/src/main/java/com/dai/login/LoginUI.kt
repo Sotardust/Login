@@ -17,7 +17,6 @@ class LoginUI(val context: Context, val root: View, val listener: LoginListener,
     private var obtainCode: TextView? = null
     private var login: TextView? = null
     private var inputCode: EditText? = null
-    private var flag = false
 
     fun findViews() {
         number = root.findViewById(R.id.number) as EditText?
@@ -33,7 +32,6 @@ class LoginUI(val context: Context, val root: View, val listener: LoginListener,
         when (v) {
             obtainCode -> {
                 if (manager.judgeText(numberData, 1)) return
-                println("numer = ${number}")
                 if (manager.verifyNumber(numberData)) {
                     listener.obtainCode(numberData)
                 } else {
@@ -43,7 +41,6 @@ class LoginUI(val context: Context, val root: View, val listener: LoginListener,
             login -> {
                 val codeData = inputCode?.text.toString()
                 if (manager.judgeText(numberData, 1)) return
-                println("number = ${number}")
                 if (manager.judgeText(codeData, 2)) return
                 listener.login(codeData)
             }

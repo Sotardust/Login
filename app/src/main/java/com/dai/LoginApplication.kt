@@ -1,6 +1,8 @@
 package com.dai
 
 import android.app.Application
+import android.content.Context
+import com.dai.util.OkHttpUtil
 import com.mob.MobSDK
 
 /**
@@ -8,12 +10,9 @@ import com.mob.MobSDK
  */
 class LoginApplication : Application() {
 
-    private var instance: LoginApplication? = null
     override fun onCreate() {
         super.onCreate()
-        instance = this
+        OkHttpUtil().setContext(applicationContext)
         MobSDK.init(this, "1cbe3c3ed61d0", "a866979838af5e8633e87cc9542d43ec")
     }
-
-    fun getInstance() = instance
 }

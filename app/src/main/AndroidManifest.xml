@@ -28,6 +28,7 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".main.MainActivity"></activity>
         <activity
             android:name="com.mob.tools.MobUIShell"
             android:configChanges="keyboardHidden|orientation|screenSize"

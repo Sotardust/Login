@@ -21,8 +21,8 @@ open class OkHttpUtil {
 
     private var tokenStorage: TokenStorage? = null
 
-    init {
-        tokenStorage = TokenStorage(LoginApplication().getInstance()!!)
+    fun setContext(context: Context) {
+        tokenStorage = TokenStorage(context)
     }
 
     private fun getOkHttpClient(): OkHttpClient {
@@ -64,7 +64,7 @@ open class OkHttpUtil {
     }
 
     fun getRequest(): Request.Builder {
-        println("tokenStorage = ${tokenStorage?.getToken()}")
-        return Request.Builder().addHeader("token", tokenStorage?.getToken())
+        val token = tokenStorage?.getToken()
+        return if (token == null) Request.Builder().addHeader("token", token) else Request.Builder()
     }
 }
