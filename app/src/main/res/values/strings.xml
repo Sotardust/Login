@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Login</string>
+
+
+    <!-- login -->
+    <string name="number_hint">手机号</string>
+    <string name="code_hint">验证码</string>
+    <string name="obtain_code">获取验证码</string>
+    <string name="login">登录</string>
+    <string name="login_failure">登录失败</string>
+    <string name="phone_number_cannot_be_empty">手机号不能为空</string>
+    <string name="verification_code_cannot_be_empty">验证码不能为空</string>
+    <string name="please_input_correct_number">请输入正确的手机号</string>
+
+    <!-- main -->
+    <string name="login_successful">登录成功</string>
+
+    <!-- mock data-->
+    <string name="mock_login_successful">{success:1,error:"",token:"aaaaaaaaaaaaaaaaaaaaa"}</string>
+    <string name="mock_login_failure">{success:0,error:"验证码错误"}</string>
+</resources>
