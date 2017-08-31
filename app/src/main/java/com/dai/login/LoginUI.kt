@@ -34,6 +34,7 @@ class LoginUI(val context: Context, val root: View, val listener: LoginListener,
                 if (manager.judgeText(numberData, 1)) return
                 if (manager.verifyNumber(numberData)) {
                     listener.obtainCode(numberData)
+                    context.toast(context.getString(R.string.code_has_been_sent))
                 } else {
                     context.toast(context.getString(R.string.please_input_correct_number))
                 }

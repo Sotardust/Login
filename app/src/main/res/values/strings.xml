@@ -11,6 +11,7 @@
     <string name="phone_number_cannot_be_empty">手机号不能为空</string>
     <string name="verification_code_cannot_be_empty">验证码不能为空</string>
     <string name="please_input_correct_number">请输入正确的手机号</string>
+    <string name="code_has_been_sent">验证码已发送</string>
 
     <!-- main -->
     <string name="login_successful">登录成功</string>

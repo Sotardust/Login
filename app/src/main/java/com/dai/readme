@@ -1,9 +1,5 @@
 向服务器提供保持登录状态方案
 
-方案一：
-    使用token：
+使用token：
     第一次登录时服务器生成一个token并返回，服务器对token存储并设置失效时间，
     客户端请求时把token添加到header中，每次请求时服务器对token进行匹配是否相等
-方案二：
-    使用cookie：
-    对cookie进行管理并保持其持久化，完成cookie的自动管理，在服务端需要对session进行处理
